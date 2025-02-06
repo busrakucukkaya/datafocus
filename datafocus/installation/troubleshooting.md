@@ -1,0 +1,6 @@
+| Issue | Solution |
+|--------------|-------------|
+| **Misconfigured Application - Reinstallation Required** | **1.** Navigate to the datafocus folder:<br>**> cd datafocus**<br> **2.** Shut down and remove all services:<br>**> docker compose down -v**<br> **3.** Delete the entire datafocus folder.To clean up the entire Docker environment (optional):<br>**> docker system prune -af**<br>|
+| **Cannot Access User Interface / CORS Errors** | If you cannot reach the user interface or encounter CORS errors: <br> **1.** Restart the router container: <br> **> docker compose restart router** <br> **2.** Verify the hostname configuration as described in Hostname Configuration. <br> **3.** Ensure ports **80** and **443** are open on the server.|
+| **"Compose" is Not a Docker Command** | If you encounter the error `compose` is not a docker command: <br> This likely indicates that Docker Compose is not properly installed or configured. <br> Revisit the installation steps to ensure Docker Compose is correctly set up on your system. |
+| **Invalid Parameter: redirect_uri** | If you receive an `Invalid Parameter: redirect_uri` error:  <br> **1.** Double-check the configurations outlined in **Keycloak Configuration**. <br> **2.** Verify that the **Root URL** and **Valid Redirect URIs** are properly set according to your hostname.|
