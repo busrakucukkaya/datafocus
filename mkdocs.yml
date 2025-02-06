@@ -1,0 +1,111 @@
+site_name: Data Focus
+site_url: https://documentation.netfein.com
+theme:
+  name: material
+  logo: assets/images/data-focus-logo.png
+  favicon: assets/images/data-focus-icon.png
+  palette:
+     # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: "indigo"
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: "blue"
+      accent: deep orange
+  features:
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+    - content.tabs.link
+    - content.footnote.tooltips
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - navigation.tracking
+    - content.tooltips
+  language: en
+  font:
+    text: Merriweather Sans
+nav:
+  - Introduction: index.md
+  
+  - Installation:
+    - Before Installation: datafocus\installation\beforeinstall.md
+    - Docker Installation: datafocus\installation\1dockerinstall.md
+    - Extracting Packages: datafocus\installation\2extractpackages.md
+    - Loading Docker Images: datafocus\installation\3loadimages.md
+    - Hostname Configuration: datafocus\installation\4hostnameconf.md
+    - HTTPS Configuration (Optional): datafocus\installation\5httpsconf.md
+    - Deployment: datafocus\installation\6deployment.md
+    - Keycloak Configuration: datafocus\installation\7keycloakconf.md
+    - MinIO Configuration: datafocus\installation\8minioconf.md
+  - Usage:
+    - Logging in to Data Focus: datafocus\usage\1logging.md
+    - Menu and Controls: datafocus\usage\2menucontrols.md
+    - Dashboard: datafocus\usage\3dashboard.md
+    - Explore: datafocus\usage\4explore.md
+    - Classification: datafocus\usage\5classificaiton.md
+    - Business Glossary: datafocus\usage\6bussglossary.md
+    - Data Catalog: datafocus\usage\7datacatalog.md
+    - Management: datafocus\usage\8management.md
+    - Data Quality: datafocus\usage\9dataquality.md
+  - Troubleshooting: datafocus\installation\troubleshooting.md
+  - Release Notes:
+    - 1.2.0: datafocus\relnotes\df1.2.0.md
+    - 2.0.0: datafocus\relnotes\df2.0.0.md
+  - Brochure: datafocus\brochure.md
+  
+
+plugins:
+  - search
+  
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+  - def_list
+  - pymdownx.highlight:
+      auto_title: true
+
+extra: 
+  version:
+    provider: mike
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/kafein-software/posts/?feedView=all
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/KafeinC
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/kafeintechnology/?hl=tr
+
+extra_javascript:
+  - js/toggle.js
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
+extra_css:
+  - css/toggle.css
+
+copyright: "© Copyright 2025 Kafein Technology Solutions." 

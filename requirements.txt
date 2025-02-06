@@ -1,0 +1,10 @@
+mkdocs
+mkdocs-material
+mkdocs-awesome-pages-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-versioning
+mkdocs-markdownextradata-plugin
+mkdocs-mermaid2-plugin
+jinja2
+wheel
+mkdocs-pdf-export-plugin
